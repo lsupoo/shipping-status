@@ -6,6 +6,15 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline'",
+      'font-src': "'self' fonts.gstatic.com",
+      'connect-src': "'self' http://arraylearn.com:* ws://arraylearn.com:* http://127.0.0.1:8080", // Allow data (ajax/websocket) from arraylearn.com
+      'img-src': "'self' data: http://arraylearn.com:* ",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
