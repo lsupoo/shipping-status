@@ -1,0 +1,44 @@
+{{yield}}
+<thead>
+<tr>
+    <th>Status</th>
+    <th>Shipment</th>
+    <th>Shipment total</th>
+    <th>Received</th>
+    <th>Received</th>
+    <th>History</th>
+
+</tr>
+</thead>
+<tbody>
+    {{#each sortedItems as |item|}}
+    <tr>
+        <td class="status">
+            {{item.currentStatus.code}}
+        </td>
+        <td class="reference">
+            {{item.shippingReferenceId}}
+        </td>
+        <td class="date">
+            {{format-date item.shipDate 'MM / DD / YYYY'}}
+        </td>
+        <td class="addresses">
+            {{item.receivingAddress.addresses}}
+        </td>
+        <td class="date">
+            {{format-date item.receiveDate 'MM / DD / YYYY'}}
+        </td>
+        <td class="show-more" {{action 'toggleShowHistory' item}}>
+        +
+        </td>
+    </tr>
+    <tr class="history">
+        <td colspan="6">
+            <div class="shipping-container" id="{{item.shippingHistoryId}}">
+            {{!shipment-history historyItems.sortedFullHistory}}
+            test
+            </div>
+        </td>
+    </tr>
+{{/each}}
+</tbody>

@@ -1,3 +1,20 @@
 body {
   background-color: #CCC;
+
+}
+.shipment-table{
+  width: 100%;
+  tr{
+    .show-more{
+      cursor: pointer;
+    }
+    &.history{
+      .shipping-container{
+        display: none;
+      }
+    }
+  }
+  td{
+    text-align: center;
+  }
 }

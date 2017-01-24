@@ -36,13 +36,15 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-composability": "0.3.7",
     "ember-data": "^2.10.0",
+    "ember-data-hal-9000": "0.3.2",
     "ember-export-application-global": "^1.0.5",
+    "ember-font-awesome": "2.2.0",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.10"
   },
   "dependencies": {
-    "app-utilities": "../edmeasures/library/app-source/_assets/ember/addons/app-utilities"
+    "app-utilities": "../../../../../GIT/edmeasures/library/app-source/_assets/ember/addons/app-utilities"
   },
   "engines": {
     "node": ">= 0.12.0"
